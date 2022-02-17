@@ -2,7 +2,7 @@ package sort;
 
 
 /**
- * ¿ìÅÅ(Ğ¡µ½´óÅÅĞò)
+ * å¿«æ’(å°åˆ°å¤§æ’åº)
  */
 public class QuickSort {
 
@@ -34,7 +34,7 @@ public class QuickSort {
 			return;
 		}
 		int patition = partition(a, start, end);
-		quickSort(a, start, patition - 1);// ×¢ÒâÕâÀïµÄEND´Ópatition-1¿ªÊ¼
-		quickSort(a, patition + 1, end);// ×¢ÒâÕâÀïµÄSTART´Ópatition+1¿ªÊ¼
+		quickSort(a, start, patition - 1);// æ³¨æ„è¿™é‡Œçš„ENDä»patition-1å¼€å§‹
+		quickSort(a, patition + 1, end);// æ³¨æ„è¿™é‡Œçš„STARTä»patition+1å¼€å§‹
 	}
 }

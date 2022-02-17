@@ -57,12 +57,12 @@ public class Util {
 	public static void printTree(int[] array){
 		int deep = (int) (Math.log(array.length) / Math.log(2) + 1);
 		int printDeep = 0;
-		for(int i = 0; i < deep; i++){// ²ã´òÓ¡
+		for(int i = 0; i < deep; i++){// å±‚æ‰“å°
 			printLoop(NUM_SEPERATE_WIDTH, deep - printDeep);
 			int levelNumCount = (int) Math.pow(2, printDeep); 
 			int firstNumIndex = (int) (levelNumCount - 1);
 			int currentLevelWidth = (levelNumCount - 1) * NUM_SEPERATE_WIDTH.length();
-			for(int j = 0; j < levelNumCount; j++){// ²ãµÄÊı×Ö´òÓ¡
+			for(int j = 0; j < levelNumCount; j++){// å±‚çš„æ•°å­—æ‰“å°
 				if(firstNumIndex > array.length - 1){
 					break;
 				}
@@ -75,8 +75,8 @@ public class Util {
 	}
 	
 	public static void printTreeByMaxtri(int[] array){
-		// ÓÃ¾ØÕó´ø×ø±êÀ´´òÓ¡
-		// Ò»¸öÊı×ÖÕ¼1¸öÊı×éÔªËØÎ»ÖÃ£¬Ò»¸ö¼ä¸ôÕ¼2¸öÊı×éÔªËØÎ»ÖÃ
+		// ç”¨çŸ©é˜µå¸¦åæ ‡æ¥æ‰“å°
+		// ä¸€ä¸ªæ•°å­—å 1ä¸ªæ•°ç»„å…ƒç´ ä½ç½®ï¼Œä¸€ä¸ªé—´éš”å 2ä¸ªæ•°ç»„å…ƒç´ ä½ç½®
 		int deep = (int) (Math.log(array.length) / Math.log(2) + 1);
 		int length = deep;
 		int width = (int) (Math.pow(2, deep) * (NUM_SEPERATE_WIDTH.length() + 1));
@@ -90,7 +90,7 @@ public class Util {
 				maxtri[i][j] = " ";
 			}
 		}
-		// ¸ù¾İµÚÒ»¸öÊı¼ä¸ô´òÓ¡
+		// æ ¹æ®ç¬¬ä¸€ä¸ªæ•°é—´éš”æ‰“å°
 		for(int level = 0; level < deep; level++){
 			int firtNumIndex = (int) (Math.pow(2, level) - 1);
 			int firstNumRange = rootIndex / deep * (deep - level - 1);
@@ -114,8 +114,8 @@ public class Util {
 	}
 	
 	public static void printTreeByMaxtri2(int[] array){
-		// ÓÃ¾ØÕó´ø×ø±êÀ´´òÓ¡
-		// Ò»¸öÊı×ÖÕ¼1¸öÊı×éÔªËØÎ»ÖÃ£¬Ò»¸ö¼ä¸ôÕ¼2¸öÊı×éÔªËØÎ»ÖÃ
+		// ç”¨çŸ©é˜µå¸¦åæ ‡æ¥æ‰“å°
+		// ä¸€ä¸ªæ•°å­—å 1ä¸ªæ•°ç»„å…ƒç´ ä½ç½®ï¼Œä¸€ä¸ªé—´éš”å 2ä¸ªæ•°ç»„å…ƒç´ ä½ç½®
 		int deep = (int) (Math.log(array.length) / Math.log(2) + 1);
 		int length = deep;
 		int width = (int) (Math.pow(2, deep) * (NUM_SEPERATE_WIDTH.length() + 1));
@@ -129,7 +129,7 @@ public class Util {
 				maxtri[i][j] = " ";
 			}
 		}
-		// ´Ó¸ú½Úµãµİ¹éÌî³ä×óÓÒº¢×Ó½Úµã
+		// ä»è·ŸèŠ‚ç‚¹é€’å½’å¡«å……å·¦å³å­©å­èŠ‚ç‚¹
 		fillChild(maxtri, array, 0, 0, rootIndex);
 		
 		for(int i = 0; i < maxtri.length; i++){
@@ -140,10 +140,10 @@ public class Util {
 		}
 	}
 	
-	// ´ÓÒ¶×Ó½Úµã¿ªÊ¼´òÓ¡
+	// ä»å¶å­èŠ‚ç‚¹å¼€å§‹æ‰“å°
 	public static void printTreeByMaxtri3(int[] array){
-		// ÓÃ¾ØÕó´ø×ø±êÀ´´òÓ¡
-		// Ò»¸öÊı×ÖÕ¼1¸öÊı×éÔªËØÎ»ÖÃ£¬Ò»¸ö¼ä¸ôÕ¼2¸öÊı×éÔªËØÎ»ÖÃ
+		// ç”¨çŸ©é˜µå¸¦åæ ‡æ¥æ‰“å°
+		// ä¸€ä¸ªæ•°å­—å 1ä¸ªæ•°ç»„å…ƒç´ ä½ç½®ï¼Œä¸€ä¸ªé—´éš”å 2ä¸ªæ•°ç»„å…ƒç´ ä½ç½®
 		int deep = (int) (Math.log(array.length) / Math.log(2) + 1);
 		int length = deep;
 		int width = (int) (Math.pow(2, deep) * (NUM_SEPERATE_WIDTH.length() + 1));
@@ -157,7 +157,7 @@ public class Util {
 				maxtri[i][j] = " ";
 			}
 		}
-		// ´Ó¸ú½Úµãµİ¹éÌî³ä×óÓÒº¢×Ó½Úµã
+		// ä»è·ŸèŠ‚ç‚¹é€’å½’å¡«å……å·¦å³å­©å­èŠ‚ç‚¹
 		fillChild(maxtri, array, 0, 0, rootIndex);
 		
 		for(int i = 0; i < maxtri.length; i++){
@@ -179,7 +179,7 @@ public class Util {
 		int leftChildY = rootY - NUM_SEPERATE_WIDTH.length();
 		int rightChildY = rootY + NUM_SEPERATE_WIDTH.length();
 		
-		// µ÷ÕûÊ÷½á¹¹, ÍùÓÒÆ«ÒÆ
+		// è°ƒæ•´æ ‘ç»“æ„, å¾€å³åç§»
 //		if(!maxtri[childLevel][leftChildY].equals(" ")){
 //			maxtri[level][rootY] = array[rootArrayIndex] + " ";
 //			rootY = rootY + 2 * NUM_SEPERATE_WIDTH.length();

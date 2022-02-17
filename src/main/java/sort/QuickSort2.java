@@ -2,7 +2,7 @@ package sort;
 
 
 /**
- * ¿ìÅÅ(Ğ¡µ½´óÅÅĞò)
+ * å¿«æ’(å°åˆ°å¤§æ’åº)
  */
 public class QuickSort2 {
 
@@ -15,7 +15,7 @@ public class QuickSort2 {
 	}
 
 	public static int partition2(int[] array, int start, int end){
-		int mid = array[end];// ÒÔ»®·ÖÊı×é×îºóÒ»¸öÖµÎªÖ÷Ôª
+		int mid = array[end];// ä»¥åˆ’åˆ†æ•°ç»„æœ€åä¸€ä¸ªå€¼ä¸ºä¸»å…ƒ
 		int lastMinIndex = start - 1;
 		for(int i = start; i < end; i++){
 			if(array[i] <= mid){
@@ -23,7 +23,7 @@ public class QuickSort2 {
 				Util.swap(array, lastMinIndex, i);
 			}
 		}
-		Util.swap(array, lastMinIndex + 1, end);// °ÑÖ÷ÔªÎ»ÖÃ½»»»
+		Util.swap(array, lastMinIndex + 1, end);// æŠŠä¸»å…ƒä½ç½®äº¤æ¢
 		return lastMinIndex + 1;
 	}
 	

@@ -4,7 +4,7 @@ import sort.ExampleArray;
 import sort.Util;
 
 /**
- * ¸ù¾İËã·¨µ¼ÂÛµÄÎ±´úÂë£¬Íê³É¿ìËÙÅÅĞò¿ìËÙÑ¡ÔñµÄ´úÂë¡£
+ * æ ¹æ®ç®—æ³•å¯¼è®ºçš„ä¼ªä»£ç ï¼Œå®Œæˆå¿«é€Ÿæ’åºå¿«é€Ÿé€‰æ‹©çš„ä»£ç ã€‚
  * @author zy
  *
  */
@@ -16,29 +16,29 @@ public class randomizedSelect {
 	public static void main(String[] args) {
 		 int a[] = ExampleArray.A;
 		 //a=quickSort(a,0,a.length-1);
-//		 System.out.print("ÅÅĞò½á¹û£º");
+//		 System.out.print("æ’åºç»“æœï¼š");
 //		 for(int i=0;i<a.length;i++){
 //			 System.out.print(a[i]+" ");
 //		 }
-		 int result=randomizedSelect(a, 0, a.length-1, 8);//²úÉúµÚÈıĞ¡µÄÊı
+		 int result=randomizedSelect(a, 0, a.length-1, 8);//äº§ç”Ÿç¬¬ä¸‰å°çš„æ•°
 		 System.out.print("\n"+result);
 	}
 	
 	/**
 	 * 
-	 * @param a Êı×é
-	 * @param p Êı×éµÄµÚÒ»¸öÔªËØ
-	 * @param r Êı×éµÄ×îºóÒ»¸öÔªËØ
-	 * @param i ĞèÒªÇóµÚ¼¸Ğ¡µÄÔªËØ
+	 * @param a æ•°ç»„
+	 * @param p æ•°ç»„çš„ç¬¬ä¸€ä¸ªå…ƒç´ 
+	 * @param r æ•°ç»„çš„æœ€åä¸€ä¸ªå…ƒç´ 
+	 * @param i éœ€è¦æ±‚ç¬¬å‡ å°çš„å…ƒç´ 
 	 * @return
 	 */
 	private static int randomizedSelect(int[] a,int p,int r,int i){
 		if(p==r){
-			return a[p];//ÕâÖÖÇé¿ö¾ÍÊÇÊı×éÄÚÖ»ÓĞÒ»¸öÔªËØ
+			return a[p];//è¿™ç§æƒ…å†µå°±æ˜¯æ•°ç»„å†…åªæœ‰ä¸€ä¸ªå…ƒç´ 
 		}
 //		int q=randomizedPartition(a,p,r);
 		int q = partition(a,p,r);
-		int k=q-p+1;//ÄÃµ½ÉÏÒ»¾äÖĞ×÷ÎªÊàÅ¦µÄÊıÊÇµÚ¼¸Ğ¡µÄÊı
+		int k=q-p+1;//æ‹¿åˆ°ä¸Šä¸€å¥ä¸­ä½œä¸ºæ¢çº½çš„æ•°æ˜¯ç¬¬å‡ å°çš„æ•°
 		if(i==k){
 			return a[q];
 		}else if(i<k){
@@ -81,7 +81,7 @@ public class randomizedSelect {
 //	}
 	private static int randomizedPartition(int[] a,int p,int r){
 		java.util.Random random = new java.util.Random();
-		int i=Math.abs(random.nextInt() % (r-p+1)+p);//²úÉúÖ¸¶¨·¶Î§ÄÚµÄËæ»úÊı
+		int i=Math.abs(random.nextInt() % (r-p+1)+p);//äº§ç”ŸæŒ‡å®šèŒƒå›´å†…çš„éšæœºæ•°
 		swap(a,i,r);
 		return partition(a,p,r);
 	}

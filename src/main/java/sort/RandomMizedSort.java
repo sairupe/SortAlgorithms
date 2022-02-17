@@ -1,9 +1,9 @@
 package sort;
 
 /**
- * É¸Ñ¡³öµÚ¼¸Ğ¡µÄÔªËØ
- * ¼ÈÊı×éÊÇ´Ó´óµ½Ğ¡ÅÅĞòµÄ
- * ÓĞµãÏÂ¶ş²æ²éÕÒµÄ¸Ğ¾õ
+ * ç­›é€‰å‡ºç¬¬å‡ å°çš„å…ƒç´ 
+ * æ—¢æ•°ç»„æ˜¯ä»å¤§åˆ°å°æ’åºçš„
+ * æœ‰ç‚¹ä¸‹äºŒå‰æŸ¥æ‰¾çš„æ„Ÿè§‰
  * @author Zh
  *
  */
@@ -17,15 +17,15 @@ public class RandomMizedSort {
 
 	public static int randomMizedSort(int[] array, int start, int end, int howSmall){
 		if(start == end){
-			return array[start];//ÕâÖÖÇé¿ö¾ÍÊÇÊı×éÄÚÖ»ÓĞÒ»¸öÔªËØ
+			return array[start];//è¿™ç§æƒ…å†µå°±æ˜¯æ•°ç»„å†…åªæœ‰ä¸€ä¸ªå…ƒç´ 
 		}
 		
 		int partition = QuickSort2.partition2(array, start, end);
-		// ÄÃµ½ÉÏÒ»¾äÖĞ×÷ÎªÊàÅ¦µÄÊıÊÇµÚ¼¸Ğ¡µÄÊı
-		// ¼Èarray[start, p]ÓĞ¶àÉÙ¸öÊı
+		// æ‹¿åˆ°ä¸Šä¸€å¥ä¸­ä½œä¸ºæ¢çº½çš„æ•°æ˜¯ç¬¬å‡ å°çš„æ•°
+		// æ—¢array[start, p]æœ‰å¤šå°‘ä¸ªæ•°
 		int smallIndex = partition - start + 1;
 		
-		// ×¢ÒâÏÂÃæÁ¬ĞøµÄIF-ELSE·ÖÖ§
+		// æ³¨æ„ä¸‹é¢è¿ç»­çš„IF-ELSEåˆ†æ”¯
 		if(smallIndex == howSmall){
 			return array[partition];
 		}
@@ -33,11 +33,11 @@ public class RandomMizedSort {
 			return randomMizedSort(array, start, partition - 1, howSmall);
 		}
 		else { //if(howSmall > smallIndex){
-			//array[start, p]ÓĞsmallIndex¸öÊı£¬ÔòËùÇóµÚ¼¸´óµÄÊıÔÚºóÃæÊı×éµÄµÚ howSmall - smallIndex¸ö
+			//array[start, p]æœ‰smallIndexä¸ªæ•°ï¼Œåˆ™æ‰€æ±‚ç¬¬å‡ å¤§çš„æ•°åœ¨åé¢æ•°ç»„çš„ç¬¬ howSmall - smallIndexä¸ª
 			// [smallIndex][smallIndex+1][smallIndex+2]...[howSmall]
-			// smallIndexµ½howSmallÓĞ howSmall-smallIndex + 1¸öÊı£¬
-			// ¹Ê´ÓsmallIndexËãÆğÊÇµÚhowSmall-smallIndex + 1Î»
-			// µ«ÏÖÔÚĞÂÊı×é´ÓsmallIndex+1ËãÆğ£¬¹Ê howSmall-smallIndex+1-1 = howSmall-smallIndex			
+			// smallIndexåˆ°howSmallæœ‰ howSmall-smallIndex + 1ä¸ªæ•°ï¼Œ
+			// æ•…ä»smallIndexç®—èµ·æ˜¯ç¬¬howSmall-smallIndex + 1ä½
+			// ä½†ç°åœ¨æ–°æ•°ç»„ä»smallIndex+1ç®—èµ·ï¼Œæ•… howSmall-smallIndex+1-1 = howSmall-smallIndex			
 			return randomMizedSort(array, partition + 1, end, howSmall - smallIndex);
 		}
 	}

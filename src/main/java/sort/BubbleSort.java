@@ -1,6 +1,6 @@
 package sort;
 /**
- * Ã°ÅÝ
+ * å†’æ³¡
  */
 public class BubbleSort {
 

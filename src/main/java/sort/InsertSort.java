@@ -1,6 +1,6 @@
 package sort;
 /**
- * ²åÈë
+ * æ’å…¥
  */
 public class InsertSort {
 	
