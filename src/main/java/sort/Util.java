@@ -13,10 +13,10 @@ public class Util {
 		array[b] = array[a];
 		array[a] = temp;
 		//Util.printBTree(array);
-		Util.print(array);
-		if(array[1] == 10){
-			System.out.println();
-		}
+//		Util.print(array);
+//		if(array[1] == 10){
+//			System.out.println();
+//		}
 	}
 	
 	public static void printBTree(int[] array) {
