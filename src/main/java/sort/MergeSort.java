@@ -12,10 +12,10 @@ public class MergeSort {
     public static void main(String[] args) {
         // 递归算法
         recursiveSort(a1, 0, a1.length - 1);
-        System.out.println("递归算法的结果是" + Arrays.toString(a1));
-//        System.out.println(Arrays.toString(a1));
-//        test(a1);
-//        System.out.println(Arrays.toString(a1));
+        System.out.println("递归算法的结果是\n" + Arrays.toString(a1));
+        // 非递归算法
+        unRecursive(a2);
+        System.out.println("非递归算法的结果是\n" + Arrays.toString(a2));
     }
 
     /**
@@ -38,8 +38,13 @@ public class MergeSort {
      *
      * @return
      */
-    private static int[] unRecursive(int[] a) {
-        return null;
+    private static void unRecursive(int[] a) {
+        int N = a2.length;
+        for (int cs = 1; cs < N; cs = cs * 2) {// 子数组每次扩容两倍大小进行合并 childSize
+            for (int lo = 0; lo < N - cs; lo += cs * 2) { // 子数组索引, 小于 N - cs, 因为 lo + cs 是mid的位置, lo后要预留2个数组
+                merge(a2, lo, lo + cs - 1, Math.min(lo + cs + cs - 1, N - 1));
+            }
+        }
     }
 
     private static void merge(int[] a, int lo, int mid, int hi) {

@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a8ea79c-d2e8-44ef-a9e1-c539940186d4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/sort/MergeSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sort/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sort/MergeSort.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +109,7 @@
       <option name="presentableId" value="Default" />
       <updated>1645083634910</updated>
       <workItem from="1645083636738" duration="7427000" />
-      <workItem from="1645165719488" duration="1452000" />
+      <workItem from="1645165719488" duration="2854000" />
     </task>
     <servers />
   </component>
