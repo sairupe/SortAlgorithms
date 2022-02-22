@@ -3,6 +3,8 @@ package sort;
 
 /**
  * 快排(小到大排序)
+ * 和QuickSort2的原理一致,只不过是指针移动方向不同,这里从两边统一往中间mid移动
+ * 遍历了整个数组,总遍历数是一样的
  */
 public class QuickSort {
 

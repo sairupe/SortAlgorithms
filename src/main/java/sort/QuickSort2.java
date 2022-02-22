@@ -2,7 +2,8 @@ package sort;
 
 
 /**
- * 快排(小到大排序)
+ * 快排(小到大排序) 和QuickSort的原理一致,只不过是指针移动方向不同,这里从左统一往右移动检查
+ * 历了整个数组,总遍历数是一样的
  */
 public class QuickSort2 {
 
