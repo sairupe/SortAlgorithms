@@ -91,11 +91,11 @@ public class HeapSort2 {
 	 *	带入则有
 	 *	L(Ai) = 2 * Ai + 1; R(Ai) = 2 * Ai  + 2
 	 */
-	public static int getLeftChild(int root){
-		return (root + 1) * 2 - 1;// 2i + 1
+	public static int getLeftChild(int i){
+		return (i + 1) * 2 - 1;// 2i + 1
 	}
 	
-	public static int getRightChild(int root){
-		return (root + 1) * 2 + 1 - 1;// 2i + 2
+	public static int getRightChild(int i){
+		return (i + 1) * 2 + 1 - 1;// 2i + 2
 	}
 }
