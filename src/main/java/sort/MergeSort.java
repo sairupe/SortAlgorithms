@@ -27,7 +27,7 @@ public class MergeSort {
         if (lo >= hi) {
             return;
         }
-        int mid = lo + (hi - lo) / 2;
+        int mid = lo + (hi - lo) / 2;// (lo + hi) / 2 ?
         recursiveSort(a, lo, mid);
         recursiveSort(a, mid + 1, hi);
         merge(a, lo, mid, hi);
